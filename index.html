@@ -5,12 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Recruitment Social Club</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+
 <style>
 body{
 margin:0;
-font-family: Arial, Helvetica, sans-serif;
+font-family:Inter, sans-serif;
 background:#f5f5f4;
-color:#111;
+color:#1c1917;
 }
 
 .container{
@@ -27,33 +29,44 @@ gap:40px;
 }
 
 .hero h1{
-font-size:52px;
+font-size:56px;
 line-height:1.05;
 margin-bottom:20px;
 }
 
 .hero p{
-color:#555;
+color:#57534e;
 font-size:18px;
 max-width:520px;
 }
 
 .button{
-background:#111827;
+background:#1c1917;
 color:white;
 padding:14px 22px;
-border-radius:14px;
+border-radius:16px;
 text-decoration:none;
 display:inline-block;
 margin-top:20px;
 font-weight:600;
 }
 
+.logo-box{
+background:#c79a62;
+padding:28px;
+border-radius:32px;
+}
+
+.logo-box img{
+width:320px;
+display:block;
+}
+
 .section{
-margin-top:60px;
 background:white;
 padding:40px;
-border-radius:24px;
+border-radius:28px;
+margin-top:60px;
 }
 
 .grid{
@@ -64,31 +77,20 @@ margin-top:20px;
 }
 
 .card{
-background:#f5f5f4;
-padding:18px;
+background:#fafaf9;
+padding:16px;
 border-radius:14px;
-font-weight:500;
 }
 
 .cta{
-background:#0b0b0b;
+background:#1c1917;
 color:white;
 padding:40px;
-border-radius:30px;
+border-radius:32px;
 display:flex;
 justify-content:space-between;
 align-items:center;
 margin-top:80px;
-}
-
-.cta h2{
-margin:0 0 10px 0;
-font-size:32px;
-}
-
-.cta p{
-opacity:.8;
-margin:0;
 }
 
 .cta-button{
@@ -98,35 +100,6 @@ padding:14px 24px;
 border-radius:20px;
 font-weight:600;
 text-decoration:none;
-}
-
-.logo-box{
-background:#c79a62;
-padding:24px;
-border-radius:28px;
-}
-
-.logo-box img{
-width:100%;
-display:block;
-border-radius:20px;
-}
-
-@media(max-width:900px){
-.hero{
-flex-direction:column;
-text-align:left;
-}
-
-.grid{
-grid-template-columns:1fr;
-}
-
-.cta{
-flex-direction:column;
-gap:20px;
-align-items:flex-start;
-}
 }
 </style>
 </head>
@@ -140,7 +113,7 @@ align-items:flex-start;
 <h1>Helping ambitious startups hire the people who actually move the needle.</h1>
 
 <p>
-I’m Scott Dagnanleach, a technical recruiter focused on Health AI, applied AI, data and engineering hires.
+I’m Scott Dagnanleach, a technical recruiter focused on Health AI, applied AI, data and engineering hires. I help founders and hiring leaders land high-impact talent without wasting time on low-signal process.
 </p>
 
 <a class="button" href="https://calendly.com/scottdagnanleach/introductory-call">
@@ -153,18 +126,19 @@ Book a conversation
 </div>
 </div>
 
+
 <div class="section">
 <h2>What I recruit</h2>
 
 <div class="grid">
 <div class="card">AI and ML engineers</div>
-<div class="card">Data scientists and engineers</div>
-<div class="card">Founding engineers</div>
-<div class="card">Backend and platform engineers</div>
-<div class="card">Health AI technical talent</div>
-<div class="card">Technical leadership hires</div>
+<div class="card">Data scientists and data engineers</div>
+<div class="card">Backend, platform and founding engineers</div>
+<div class="card">Health AI and biotech technical talent</div>
+<div class="card">Technical leadership and first key hires</div>
 </div>
 </div>
+
 
 <div class="cta">
 <div>
@@ -174,7 +148,7 @@ RECRUITMENT SOCIAL CLUB
 
 <h2>Need help hiring technical talent?</h2>
 
-<p>
+<p style="opacity:.8;margin:0;">
 Whether you need a founding engineer, AI hire, data specialist or technical leader, I can help you run a sharper search.
 </p>
 </div>
