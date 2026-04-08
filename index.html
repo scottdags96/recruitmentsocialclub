@@ -1,533 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Recruitment Social Club</title>
-  <meta
-    name="description"
-    content="Recruitment Social Club helps ambitious startups hire technical talent across Health AI, applied AI, data, and engineering."
-  />
-  <style>
-    :root {
-      --bg: #f5f5f4;
-      --card: #ffffff;
-      --text: #1c1917;
-      --muted: #57534e;
-      --line: #e7e5e4;
-      --accent: #c79a62;
-      --dark: #1c1917;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recruitment Social Club</title>
 
-    * {
-      box-sizing: border-box;
-    }
+<style>
+body{
+margin:0;
+font-family: Arial, Helvetica, sans-serif;
+background:#f5f5f4;
+color:#111;
+}
 
-    body {
-      margin: 0;
-      font-family: Inter, Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.5;
-    }
+.container{
+max-width:1100px;
+margin:auto;
+padding:60px 20px;
+}
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+.hero{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:40px;
+}
 
-    .container {
-      width: min(1120px, calc(100% - 40px));
-      margin: 0 auto;
-    }
+.hero h1{
+font-size:52px;
+line-height:1.05;
+margin-bottom:20px;
+}
 
-    .hero {
-      padding: 56px 0 72px;
-    }
+.hero p{
+color:#555;
+font-size:18px;
+max-width:520px;
+}
 
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 40px;
-      align-items: center;
-    }
+.button{
+background:#111827;
+color:white;
+padding:14px 22px;
+border-radius:14px;
+text-decoration:none;
+display:inline-block;
+margin-top:20px;
+font-weight:600;
+}
 
-    .pill {
-      display: inline-flex;
-      align-items: center;
-      padding: 10px 16px;
-      border: 1px solid #d6d3d1;
-      background: #fff;
-      border-radius: 999px;
-      font-size: 14px;
-      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-    }
+.section{
+margin-top:60px;
+background:white;
+padding:40px;
+border-radius:24px;
+}
 
-    h1 {
-      font-size: clamp(40px, 6vw, 72px);
-      line-height: 0.98;
-      margin: 18px 0;
-      letter-spacing: -0.04em;
-    }
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:16px;
+margin-top:20px;
+}
 
-    h2 {
-      font-size: clamp(28px, 3vw, 40px);
-      line-height: 1.05;
-      letter-spacing: -0.03em;
-      margin: 12px 0 0;
-    }
+.card{
+background:#f5f5f4;
+padding:18px;
+border-radius:14px;
+font-weight:500;
+}
 
-    .lead {
-      max-width: 650px;
-      font-size: 20px;
-      color: var(--muted);
-      margin: 0 0 28px;
-      line-height: 1.8;
-    }
+.cta{
+background:#0b0b0b;
+color:white;
+padding:40px;
+border-radius:30px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-top:80px;
+}
 
-    .buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-bottom: 28px;
-    }
+.cta h2{
+margin:0 0 10px 0;
+font-size:32px;
+}
 
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 14px 22px;
-      border-radius: 18px;
-      font-weight: 700;
-      font-size: 15px;
-      transition: transform 0.16s ease;
-      box-shadow: 0 1px 2px rgba(0,0,0,0.08);
-    }
+.cta p{
+opacity:.8;
+margin:0;
+}
 
-    .btn:hover {
-      transform: translateY(-1px);
-    }
+.cta-button{
+background:white;
+color:#111;
+padding:14px 24px;
+border-radius:20px;
+font-weight:600;
+text-decoration:none;
+}
 
-    .btn-primary {
-      background: var(--dark);
-      color: #fff;
-    }
+.logo-box{
+background:#c79a62;
+padding:24px;
+border-radius:28px;
+}
 
-    .btn-secondary {
-      background: #fff;
-      border: 1px solid #d6d3d1;
-    }
+.logo-box img{
+width:100%;
+display:block;
+border-radius:20px;
+}
 
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 16px;
-      margin-top: 16px;
-    }
+@media(max-width:900px){
+.hero{
+flex-direction:column;
+text-align:left;
+}
 
-    .card {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 28px;
-      box-shadow: 0 8px 24px rgba(28,25,23,0.05);
-    }
+.grid{
+grid-template-columns:1fr;
+}
 
-    .stat {
-      padding: 24px;
-    }
-
-    .stat strong {
-      display: block;
-      font-size: 34px;
-      line-height: 1;
-      margin-bottom: 8px;
-    }
-
-    .stat span {
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .logo-wrap {
-      background: var(--accent);
-      padding: 28px;
-      border-radius: 36px;
-      border: 1px solid var(--line);
-      box-shadow: 0 14px 30px rgba(28,25,23,0.12);
-    }
-
-    .logo-wrap img {
-      width: 100%;
-      display: block;
-      border-radius: 28px;
-    }
-
-    .section-band {
-      background: #fff;
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-      padding: 72px 0;
-    }
-
-    .two-col {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 28px;
-    }
-
-    .panel {
-      padding: 34px;
-    }
-
-    .eyebrow {
-      text-transform: uppercase;
-      letter-spacing: 0.22em;
-      font-size: 12px;
-      font-weight: 700;
-      color: #78716c;
-    }
-
-    .list {
-      list-style: none;
-      padding: 0;
-      margin: 28px 0 0;
-      display: grid;
-      gap: 14px;
-    }
-
-    .list li {
-      background: #fff;
-      border-radius: 18px;
-      padding: 16px 18px;
-      box-shadow: 0 4px 14px rgba(28,25,23,0.06);
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      color: #44403c;
-    }
-
-    .dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 999px;
-      background: var(--dark);
-      flex: 0 0 auto;
-      margin-top: 8px;
-    }
-
-    .dark-panel {
-      background: var(--dark);
-      color: #fff;
-    }
-
-    .dark-panel .eyebrow {
-      color: #d6d3d1;
-    }
-
-    .dark-list li {
-      background: rgba(255,255,255,0.06);
-      color: #e7e5e4;
-      box-shadow: none;
-      border: 1px solid rgba(255,255,255,0.08);
-      display: block;
-    }
-
-    .section {
-      padding: 24px 0;
-    }
-
-    .approach-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 28px;
-    }
-
-    .copy {
-      margin-top: 22px;
-      color: var(--muted);
-      font-size: 17px;
-      line-height: 1.9;
-    }
-
-    .accent-panel {
-      background: var(--accent);
-    }
-
-    .fit-list {
-      margin-top: 18px;
-      display: grid;
-      gap: 14px;
-    }
-
-    .fit-item {
-      background: rgba(255,255,255,0.72);
-      border-radius: 18px;
-      padding: 16px 18px;
-      color: #1c1917;
-      font-weight: 500;
-    }
-
-    .simple-grid {
-      display: grid;
-      gap: 12px;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      margin-top: 24px;
-    }
-
-    .simple-grid.two {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .simple-card {
-      background: #fafaf9;
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      padding: 16px 18px;
-      font-weight: 500;
-    }
-
-    .cta {
-      padding: 0 0 88px;
-    }
-
-    .cta-inner {
-      background: var(--dark);
-      color: #fff;
-      border-radius: 34px;
-      padding: 42px;
-      box-shadow: 0 18px 34px rgba(28,25,23,0.18);
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 24px;
-      align-items: center;
-    }
-
-    .cta p {
-      margin: 14px 0 0;
-      color: #d6d3d1;
-      max-width: 720px;
-    }
-
-    .cta-button {
-      background: #ffffff;
-      color: #111827;
-      padding: 14px 22px;
-      border-radius: 20px;
-      font-weight: 700;
-      display: inline-block;
-      text-decoration: none;
-      white-space: nowrap;
-    }
-
-    footer {
-      padding: 0 0 36px;
-      color: #78716c;
-      font-size: 14px;
-      text-align: center;
-    }
-
-    @media (max-width: 900px) {
-      .hero-grid,
-      .two-col,
-      .approach-grid,
-      .cta-inner,
-      .simple-grid,
-      .simple-grid.two,
-      .stats {
-        grid-template-columns: 1fr;
-      }
-
-      .hero {
-        padding-top: 36px;
-      }
-
-      .cta-inner {
-        padding: 30px;
-      }
-    }
-  </style>
+.cta{
+flex-direction:column;
+gap:20px;
+align-items:flex-start;
+}
+}
+</style>
 </head>
+
 <body>
-  <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <div class="pill">Recruitment Social Club</div>
-          <h1>Helping ambitious startups hire the people who actually move the needle.</h1>
-          <p class="lead">
-            I’m Scott Dagnanleach, a technical recruiter focused on Health AI, applied AI, data and engineering hires. I help founders and hiring leaders land high-impact talent without wasting time on low-signal process.
-          </p>
 
-          <div class="buttons">
-            <a class="btn btn-primary" href="https://calendly.com/scottdagnanleach/introductory-call" target="_blank" rel="noopener noreferrer">Book a conversation</a>
-            <a class="btn btn-secondary" href="https://www.linkedin.com/in/scott-dagnanleach-902067124/" target="_blank" rel="noopener noreferrer">View LinkedIn</a>
-          </div>
+<div class="container">
 
-          <div class="stats">
-            <div class="card stat">
-              <strong>9+</strong>
-              <span>years in technical recruiting</span>
-            </div>
-            <div class="card stat">
-              <strong>Health AI</strong>
-              <span>specialist focus with startup depth</span>
-            </div>
-            <div class="card stat">
-              <strong>High signal</strong>
-              <span>searches built on judgment, not volume</span>
-            </div>
-          </div>
-        </div>
+<div class="hero">
+<div>
+<h1>Helping ambitious startups hire the people who actually move the needle.</h1>
 
-        <div>
-          <div class="logo-wrap">
-            <img src="https://raw.githubusercontent.com/public-assets-hosting/recruitment-social-club/main/logo.png" alt="Recruitment Social Club logo" />
-          </div>
-        </div>
-      </div>
-    </section>
+<p>
+I’m Scott Dagnanleach, a technical recruiter focused on Health AI, applied AI, data and engineering hires.
+</p>
 
-    <section class="section-band">
-      <div class="container two-col">
-        <div class="card panel" style="background:#fafaf9;">
-          <div class="eyebrow">What I recruit</div>
-          <h2>Specialties</h2>
-          <ul class="list">
-            <li><span class="dot"></span><span>AI and ML engineers</span></li>
-            <li><span class="dot"></span><span>Data scientists and data engineers</span></li>
-            <li><span class="dot"></span><span>Backend, platform and founding engineers</span></li>
-            <li><span class="dot"></span><span>Health AI and biotech technical talent</span></li>
-            <li><span class="dot"></span><span>Technical leadership and first key hires</span></li>
-          </ul>
-        </div>
+<a class="button" href="https://calendly.com/scottdagnanleach/introductory-call">
+Book a conversation
+</a>
+</div>
 
-        <div class="card panel dark-panel">
-          <div class="eyebrow">Why clients work with me</div>
-          <h2>What makes me different</h2>
-          <ul class="list dark-list">
-            <li>9+ years in technical recruiting across agency and in-house</li>
-            <li>Deep focus on Health AI, applied AI, data and engineering</li>
-            <li>Able to calibrate vague specs into hires founders actually want</li>
-            <li>High-signal search style built around conversations, not resume spam</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+<div class="logo-box">
+<img src="https://raw.githubusercontent.com/public-assets-hosting/recruitment-social-club/main/logo.png">
+</div>
+</div>
 
-    <section class="section">
-      <div class="container approach-grid">
-        <div class="card panel">
-          <div class="eyebrow">Approach</div>
-          <h2>Search built on judgment</h2>
-          <p class="copy">
-            Most recruiters sell speed and volume. I focus on clarity, calibration and signal. That means understanding what the business actually needs, shaping the market story, and bringing forward candidates who make sense on paper and in conversation. My background spans agency leadership and in-house startup recruiting, which lets me balance urgency with quality.
-          </p>
-        </div>
+<div class="section">
+<h2>What I recruit</h2>
 
-        <div class="card panel accent-panel">
-          <div class="eyebrow" style="color: rgba(28,25,23,0.72);">Best fit clients</div>
-          <h2>Who I help best</h2>
-          <div class="fit-list">
-            <div class="fit-item">Seed to Series B startups</div>
-            <div class="fit-item">Health AI, applied AI, data and engineering teams</div>
-            <div class="fit-item">Founders making critical early hires</div>
-          </div>
-        </div>
-      </div>
-    </section>
+<div class="grid">
+<div class="card">AI and ML engineers</div>
+<div class="card">Data scientists and engineers</div>
+<div class="card">Founding engineers</div>
+<div class="card">Backend and platform engineers</div>
+<div class="card">Health AI technical talent</div>
+<div class="card">Technical leadership hires</div>
+</div>
+</div>
 
-    <section class="section">
-      <div class="container">
-        <div class="card panel">
-          <div class="eyebrow">Typical roles I fill</div>
-          <h2>High-impact hires</h2>
-          <div class="simple-grid two">
-            <div class="simple-card">Founding AI engineer</div>
-            <div class="simple-card">Machine learning engineer</div>
-            <div class="simple-card">Staff / senior backend engineer</div>
-            <div class="simple-card">Head of engineering</div>
-            <div class="simple-card">Data scientist (applied AI)</div>
-            <div class="simple-card">AI agent / LLM engineer</div>
-          </div>
-        </div>
-      </div>
-    </section>
+<div class="cta">
+<div>
+<div style="letter-spacing:2px;font-size:12px;margin-bottom:8px;">
+RECRUITMENT SOCIAL CLUB
+</div>
 
-    <section class="section">
-      <div class="container">
-        <div class="card panel">
-          <div class="eyebrow">Clients</div>
-          <h2>Companies I've supported</h2>
-          <div class="simple-grid">
-            <div class="simple-card" style="text-align:center;">Health Universe</div>
-            <div class="simple-card" style="text-align:center;">Plenful</div>
-            <div class="simple-card" style="text-align:center;">MCG Health</div>
-            <div class="simple-card" style="text-align:center;">Eight Sleep</div>
-            <div class="simple-card" style="text-align:center;">Sully.ai</div>
-          </div>
-        </div>
-      </div>
-    </section>
+<h2>Need help hiring technical talent?</h2>
 
-    <section class="section">
-      <div class="container">
-        <div class="card panel">
-          <div class="eyebrow">How I work</div>
-          <h2>Simple, focused search</h2>
-          <div class="simple-grid">
-            <div class="simple-card">Calibrate the role and define the real hiring bar</div>
-            <div class="simple-card">Targeted outreach to high-signal candidates</div>
-            <div class="simple-card">Deliver a small slate and iterate quickly</div>
-          </div>
-        </div>
-      </div>
-    </section>
+<p>
+Whether you need a founding engineer, AI hire, data specialist or technical leader, I can help you run a sharper search.
+</p>
+</div>
 
-    <section class="section">
-      <div class="container">
-        <div class="card panel">
-          <div class="eyebrow">Timelines</div>
-          <h2>What to expect</h2>
-          <div class="simple-grid">
-            <div class="simple-card">First candidates: 3-7 days</div>
-            <div class="simple-card">Interview-ready shortlist: 1-2 weeks</div>
-            <div class="simple-card">Typical hire: 3-5 weeks</div>
-          </div>
-        </div>
-      </div>
-    </section>
+<a class="cta-button" href="https://calendly.com/scottdagnanleach/introductory-call">
+Book a call
+</a>
 
-    <section class="section">
-      <div class="container">
-        <div class="card panel">
-          <div class="eyebrow">Client feedback</div>
-          <h2>What clients say</h2>
-          <div class="simple-card" style="margin-top:24px; font-weight:400; line-height:1.8; color:#57534e;">
-            Add testimonial here. Example: “Scott understood our hiring bar immediately and delivered candidates that actually matched what we needed, not just what we wrote.”
-          </div>
-        </div>
-      </div>
-    </section>
+</div>
 
-    <section class="cta">
-      <div class="container">
-        <div class="cta-inner">
-          <div>
-            <div class="eyebrow" style="color:#d6d3d1;">Recruitment Social Club</div>
-            <h2>Need help hiring technical talent?</h2>
-            <p>Whether you need a founding engineer, AI hire, data specialist or technical leader, I can help you run a sharper search. Email scott@calibratr.ai or book time directly.</p>
-          </div>
+</div>
 
-          <a class="cta-button" href="https://calendly.com/scottdagnanleach/introductory-call" target="_blank" rel="noopener noreferrer">
-            Book a call
-          </a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    Recruitment Social Club · Scott Dagnanleach
-  </footer>
 </body>
 </html>
