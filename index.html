@@ -55,6 +55,10 @@ font-weight:600;
 background:#c79a62;
 padding:28px;
 border-radius:32px;
+display:flex;
+align-items:center;
+justify-content:center;
+min-width:376px;
 }
 
 .logo-box img{
@@ -91,6 +95,7 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 margin-top:80px;
+gap:24px;
 }
 
 .cta-button{
@@ -100,6 +105,35 @@ padding:14px 24px;
 border-radius:20px;
 font-weight:600;
 text-decoration:none;
+white-space:nowrap;
+display:inline-block;
+}
+
+@media(max-width:900px){
+.hero{
+flex-direction:column;
+align-items:flex-start;
+}
+
+.grid{
+grid-template-columns:1fr;
+}
+
+.logo-box{
+min-width:0;
+width:100%;
+}
+
+.logo-box img{
+width:100%;
+max-width:320px;
+margin:auto;
+}
+
+.cta{
+flex-direction:column;
+align-items:flex-start;
+}
 }
 </style>
 </head>
@@ -122,10 +156,9 @@ Book a conversation
 </div>
 
 <div class="logo-box">
-<img src="https://raw.githubusercontent.com/public-assets-hosting/recruitment-social-club/main/logo.png">
+<img alt="Recruitment Social Club logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABQAAAATwCAYAAACM5Fo9AAAACXBIWXMAAAsSAAALEgHS3X78AAAgAElEQVR4nO3de5RcZX3/8c+Z2VnZ2QUWgQhJQICQZRERQTEJqCBQjT6GJQqj0QXb1yNQ6IhI1XjY2hSxMZCIK0JQZkNQgkAqIkgiJgQSFgbJfW0b8n7v6z7u3fN7e7u7u7u+e+7v2m7+f3e7+zM7M7O7M7v7r3vGQAAAPw4q9UqAAAA0D8GAAAA2H8GAAAA2H8GAAAA2H8GAAAA2H8GAAAA2H8GAAAA2H8GAAAA2H8GAAAA2H8GAAAA2H8GAAAA2H8GAAAA2H8GAAAA2H8GAAAA2H8GAAAA2H8GAAAA2H8GAAAA2H8GAAAA2H8GAAAA2H8GAAAA2H8GAAAA2H8GAAAA2H8GAAAA2H8GAAAA2H8GAAAA2H8GAAAA2H8GAAAA2H8GAAAA2H8GAAAA2H8GAAAA2H8GAAAA2H8GAAAA2H8GAAAA2H8GAAAA2H8GAABg1v379//2b/92/fv3r1q1au7cudOnT//973+fPn36xRdf/OQnP3n37t0vvfTSBx98cP369T/84Q+3bNly7ty5Dz/88Llz5/7yl7/85S9/+ctf/vKXv/zlL3/5y1/+8pe//OUvf/nLX/7yl7/85S9/+ctf/vKXv/zlL3/5y1/+8pe//OUvf/nLX/7yl7/85S9/+ctf/vKXv/zlL3/5y1/+8pe//OUvf/nLX/7yl7/85S9/+ctf/vKXv/zlL3/5y1/+8pe//OUvf/nLX/7yl7/85S9/+ctf/vKXv/zlL3/5y1/+8pe//OUvf/nLX/7yl7/85S9/+ctf/vKXv/zlL3/5y1/+8pe//OUvf/nLX/7yl7/85S9/+ctf/vKXv/zlL3/5y1/+8pe//OUvf/nLX/7yl7/85S9/+ctf/vKXv/zlL3/5y1/+8pe//OUvf/nLX/7yl7/85S9/+ctf/vKXv/zlL3/5y1/+8pe//OUvf/nLX/7yl7/85S9/+ctf/vKXv/zlL3/5y1/+8pe//OUvf/nLX/7yl7/85S9/+ctf/vKXv/zlL3/5y1/+8pe//OUvf/nLX/7yl7/85S9/+ctf/vKXv/zlL3/5y1/+8pe//OUvf/nLX/7yl7/85S9/+ctf/vKXv/zlL3/5y1/+8pe//OUvf/nLX/7yl7/85S9/+ctf/vKXv/zlL3/5y1/+8pe//OUvf/nLX/7yl7/85S9/+ctf/vKXv/zlL3/5y1/+8pe//OUvf/nLX/7yl7/85S9/+ctf/vKXv/zlL3/5y1/+8pe//OUvf/nLX/7yl7/85S9/+ctf/vKXv/zlL3/5y1/+8pe//OUvf/nLX/7yl7/85S9/+ctf/vKXv/zlL3/5y1/+8pe//OUvf/nLX/7yl7/85S9/+ctf/vKXv/zlL3/5y1/+8pe//OUvf/nLX/7yl7/85S9/+ctf/vKXv/zlL3/5y1/+8pe//OUvf/nLX/7yl7/85S9/+ctf/vKXv/zlL3/5y1/+8pe//OUvf/nLX/7yl7/85S9/+ctf/vKXv/zlL3/5y1/+8pe//OUvf/nLX/7yl7/85S9/+ctf/vKXv/zlL3/5y1/+8pe//OUvf/nLX/7yl7/85S9/+ctf/vKXv/zlL3/5y1/+8pe//OUvf/nLX/7yl7/85S9/+ctf/vKXv/zlL3/5y1/+8pe//OUvf/nLX/7yl7/85S9/+ctf/vKXv/zlL3/5y1/+8pe//OUvfwAAAPz/2wA9QkL4fX3v7gAAAABJRU5ErkJggg==" />
 </div>
 </div>
-
 
 <div class="section">
 <h2>What I recruit</h2>
@@ -138,7 +171,6 @@ Book a conversation
 <div class="card">Technical leadership and first key hires</div>
 </div>
 </div>
-
 
 <div class="cta">
 <div>
